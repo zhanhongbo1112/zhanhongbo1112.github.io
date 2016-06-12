@@ -1,0 +1,200 @@
+/*Dark Version
+------------------------------------*/
+body.dark {
+    color: #999;
+    background-color: #252525;
+}
+
+body.dark .wrapper {
+    background: #252525;
+}
+
+body.dark h1, body.dark h2, body.dark h3, body.dark h4, body.dark h5, body.dark h6 {
+    color: #ccc;
+    font-weight: 200;
+}
+
+body.dark .wrapper p {
+    color: #999;
+}
+
+body.dark p, body.dark li, body.dark li a {
+    color: #999;
+}
+
+body.dark .headline {
+    border-bottom: 1px dotted #555;
+}
+
+/*Header
+------------------------------------*/
+body.dark .header .navbar {
+    background: #333;
+}
+
+body.dark .header .navbar-default .navbar-nav > li > a, body.dark .header .navbar-default .navbar-nav > li > a:after {
+    color: #ccc;
+}
+
+/*Toggle*/
+body.dark .header .navbar-toggle .icon-bar {
+    background: #ccc;
+}
+
+/*Media Queries*/
+@media (min-width: 768px) {
+    body.dark .header .navbar-default {
+        border-left-color: rgba(218, 218, 218, 0.1);
+        border-right-color: rgba(218, 218, 218, 0.1);
+    }
+
+    body.dark .header .dropdown-menu {
+        background: #333;
+    }
+
+    body.dark .header .navbar-default .navbar-nav > li > a:focus {
+        color: #ccc;
+    }
+}
+
+@media (max-width: 991px) {
+    body.dark .navbar-collapse {
+        background: #333;
+    }
+
+    body.dark .header .navbar-default .navbar-nav > li > a {
+        border-bottom-color: #777;
+    }
+}
+
+/*List Group
+------------------------------------*/
+body.dark .list-group-item,
+body.dark .list-group-item:hover {
+    background: #222;
+    border-color: #303030;
+}
+
+body.dark .list-toggle a:focus {
+    color: #ccc;
+}
+
+body.dark .list-toggle:after {
+    color: #999;
+}
+
+/*Bootstrap Features
+------------------------------------*/
+label {
+    color: #999;
+}
+
+body.dark strong {
+    color: #ccc;
+}
+
+body.dark dt {
+    color: #ccc;
+}
+
+body.dark dd {
+    color: #999;
+}
+
+body.dark hr {
+    border-color: #333;
+}
+
+body.dark code {
+    background: #333;
+}
+
+/*Close
+------------------------------------*/
+body.dark .close {
+    color: #999;
+    text-shadow: none;
+}
+
+body.dark .close:hover {
+    color: #bbb;
+}
+
+/*Alert Warning 
+------------------------------------*/
+body.dark .alert-info, body.dark .alert-danger, body.dark .alert-success, body.dark .alert-warning {
+    border-color: #444;
+    background-color: #333;
+}
+
+body.dark .alert h4 {
+    color: inherit;
+}
+
+body.dark .alert strong {
+    color: inherit;
+}
+
+body.dark .alert code {
+    background: #444;
+}
+
+/*Heading
+------------------------------------*/
+body.dark .heading h2:before, body.dark .heading h2:after {
+    border-color: #555;
+}
+
+/*Divider
+------------------------------------*/
+body.dark .divider.divider-dotted, body.dark .divider.divider-dashed, body.dark .divider.divider-db,
+body.dark .divider.divider-db-dotted, body.dark .divider.divider-db-dashed {
+    border-color: #555;
+}
+
+/*Background Light
+------------------------------------*/
+body.dark .bg-light {
+    border-color: #303030;
+    background: #202020;
+}
+
+body.dark .bg-light i {
+    color: #999;
+}
+
+body.dark .bg-grey {
+    background: #222;
+    border-top-color: #222;
+    border-bottom-color: #222;
+}
+
+/*Bordered Buttons
+------------------------------------*/
+body.dark .btn-u.btn-brd {
+    color: #ddd;
+}
+
+/*Dropdown Buttons
+------------------------------------*/
+body.dark .btn-group .dropdown-menu {
+    background: #222;
+}
+
+body.dark .btn-group .dropdown-menu li a {
+    color: #999;
+}
+
+body.dark .btn-group .dropdown-menu .active > a, body.dark .btn-group .dropdown-menu li > a:hover {
+    color: #999;
+}
+
+body.dark .dropdown-menu .divider {
+    background: #303030;
+}
+
+body.dark .dropdown-menu > li > a:hover, body.dark .dropdown-menu > li > a:focus {
+    color: #ccc;
+    background: #777;
+}
+
