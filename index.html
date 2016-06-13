@@ -89,6 +89,30 @@
     return this.attr(name) !== undefined;
   };
 
+  var ScrollBar = {
+    startup: function () {
+      $('.mCustomScrollbar').mCustomScrollbar({
+        theme: "minimal",
+        scrollInertia: 200,
+        scrollEasing: "linear"
+      });
+    }
+  };
+
+  var SidebarMenuDropdown = {
+    startup: function () {
+      $('.header .dropdown-toggle').on('click', function () {
+        $('.header .dropdown-menu').stop(true, false).slideUp();
+        $('.header .dropdown').removeClass('open');
+
+        if ($(this).siblings('.dropdown-menu').is(":hidden")) {
+          $(this).siblings('.dropdown-menu').stop(true, false).slideDown();
+          $(this).parents('.dropdown').addClass('open');
+        }
+      });
+    }
+  };
+
   //** jQuery Scroll to Top Control script- (c) Dynamic Drive DHTML code library: http://www.dynamicdrive.com.
   //** Available/ usage terms at http://www.dynamicdrive.com (March 30th, 09')
   //** v1.1 (April 7th, 09'):
@@ -215,12 +239,8 @@
   };
 
   $(document).ready(function () {
-    $('.mCustomScrollbar').mCustomScrollbar({
-      theme: "minimal",
-      scrollInertia: 200,
-      scrollEasing: "linear"
-    });
-
+    ScrollBar.startup();
+    SidebarMenuDropdown.startup();
     ScrollToTop.startup();
   });
 </script>

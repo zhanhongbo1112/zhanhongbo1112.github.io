@@ -218,17 +218,6 @@ a:hover {
     background: inherit !important;
 }
 
-.header .dropdown-menu li ul {
-    list-style: none;
-    padding: 0 0 0 30px;
-}
-
-.header .dropdown-menu li ul li:before {
-    content: "–";
-    color: #555;
-    font-weight: 200;
-}
-
 /*Responsive Navbar*/
 @media (max-width: 767px) {
     /*Navbar Header*/
@@ -449,16 +438,6 @@ a:hover {
     }
 }
 
-/*
- * Template Name: Unify - Responsive Bootstrap Template
- * Description: Business, Corporate, Portfolio, E-commerce, Blog and One Page Template.
- * Version: 1.9.2
- * Author: @htmlstream
- * Website: http://htmlstream.com
-*/
-
-/*Thematic Break
-------------------------------------*/
 hr {
     margin: 30px 0;
 }
@@ -504,16 +483,11 @@ h6 {
     line-height: 18px;
 }
 
-.font-open-sans {
-    font-family: "Open Sans", Arial, sans-serif;
-}
-
 h1, h2, h3, h4, h5, h6 {
     color: #555;
     margin-top: 5px;
     text-shadow: none;
     font-weight: normal;
-    font-family: "Open Sans", Arial, sans-serif;
 }
 
 h1 i, h2 i, h3 i, h4 i, h5 i, h6 i {
@@ -555,7 +529,7 @@ h1 i, h2 i, h3 i, h4 i, h5 i, h6 i {
     padding: 0 12px;
     position: relative;
     display: inline-block;
-    line-height: 34px !important; /*For Tagline Boxes*/
+    line-height: 34px !important;
 }
 
 .heading h2:before, .heading h2:after {
@@ -719,11 +693,6 @@ h3.heading-xs {
     }
 }
 
-/*Navigation
-------------------------------------*/
-.dropdown-menu, .navbar-toggle {
-    border-radius: 0;
-}
 
 /*Button Styles
 ------------------------------------*/
@@ -1135,132 +1104,6 @@ blockquote.bq-green {
     background: #72c02c;
 }
 
-/*Panel Blue*/
-.panel-blue {
-    border-color: #3498db;
-}
-
-.panel-blue > .panel-heading {
-    background: #3498db;
-}
-
-/*Panel Red*/
-.panel-red {
-    border-color: #e74c3c;
-}
-
-.panel-red > .panel-heading {
-    background: #e74c3c;
-}
-
-/*Panel Green*/
-.panel-green {
-    border-color: #2ecc71;
-}
-
-.panel-green > .panel-heading {
-    background: #2ecc71;
-}
-
-/*Panel Sea*/
-.panel-sea {
-    border-color: #1abc9c;
-}
-
-.panel-sea > .panel-heading {
-    background: #1abc9c;
-}
-
-/*Panel Orange*/
-.panel-orange {
-    border-color: #e67e22;
-}
-
-.panel-orange > .panel-heading {
-    background: #e67e22;
-}
-
-/*Panel Yellow*/
-.panel-yellow {
-    border-color: #f1c40f;
-}
-
-.panel-yellow > .panel-heading {
-    background: #f1c40f;
-}
-
-/*Panel Grey*/
-.panel-grey {
-    border-color: #95a5a6;
-}
-
-.panel-grey > .panel-heading {
-    background: #95a5a6;
-}
-
-/*Panel Dark*/
-.panel-dark {
-    border-color: #555;
-}
-
-.panel-dark > .panel-heading {
-    background: #555;
-}
-
-/*Panel Purple*/
-.panel-purple {
-    border-color: #9b6bcc;
-}
-
-.panel-purple > .panel-heading {
-    background: #9b6bcc;
-}
-
-/*Panel Aqua*/
-.panel-aqua {
-    border-color: #27d7e7;
-}
-
-.panel-aqua > .panel-heading {
-    background: #27d7e7;
-}
-
-/*Panel Brown*/
-.panel-brown {
-    border-color: #9c8061;
-}
-
-.panel-brown > .panel-heading {
-    background: #9c8061;
-}
-
-/*Panel Dark Blue*/
-.panel-dark-blue {
-    border-color: #4765a0;
-}
-
-.panel-dark-blue > .panel-heading {
-    background: #4765a0;
-}
-
-/*Panel Light Green*/
-.panel-light-green {
-    border-color: #79d5b3;
-}
-
-.panel-light-green > .panel-heading {
-    background: #79d5b3;
-}
-
-/*Panel Default Dark*/
-.panel-default-dark {
-    border-color: #585f69;
-}
-
-.panel-default-dark > .panel-heading {
-    background: #585f69;
-}
-
 /*Progress Bar
 ------------------------------------*/
 .progress {
@@ -1303,42 +1146,6 @@ blockquote.bq-green {
 
 .progress-bar-u {
     background: #72c02c;
-}
-
-.progress-bar-blue {
-    background: #3498db;
-}
-
-.progress-bar-orange {
-    background: #e67e22;
-}
-
-.progress-bar-red {
-    background: #e74c3c;
-}
-
-.progress-bar-purple {
-    background: #9b6bcc;
-}
-
-.progress-bar-aqua {
-    background: #27d7e7;
-}
-
-.progress-bar-brown {
-    background: #9c8061;
-}
-
-.progress-bar-dark-blue {
-    background: #4765a0;
-}
-
-.progress-bar-light-green {
-    background: #79d5b3;
-}
-
-.progress-bar-dark {
-    background: #555;
 }
 
 /*Progress Bar Animation
@@ -1422,22 +1229,6 @@ img.image-sm {
 img.image-md {
     width: 100px;
     height: 100px;
-}
-
-/*Responsive Video*/
-.responsive-video {
-    height: 0;
-    padding-top: 1px;
-    position: relative;
-    padding-bottom: 56.25%; /*16:9*/
-}
-
-.responsive-video iframe {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    position: absolute;
 }
 
 /*Column Sizes
@@ -1723,198 +1514,22 @@ img.image-md {
     padding-left: 5px;
 }
 
-/*Text Colors
-------------------------------------*/
-.color-sea {
-    color: #1abc9c;
-}
-
-.color-red {
-    color: #e74c3c;
-}
-
-.color-aqua {
-    color: #27d7e7;
-}
-
-.color-blue {
-    color: #3498db;
-}
-
-.color-grey {
-    color: #95a5a6;
-}
-
-.color-dark {
-    color: #555;
-}
-
-/*.color-dark1 { color: #444;}*/
-.color-darker {
-    color: #444;
-}
-
-.color-green {
-    color: #72c02c;
-}
-
-.color-brown {
-    color: #9c8061;
-}
-
-.color-light {
-    color: #ffffff;
-}
-
-.color-orange {
-    color: #e67e22;
-}
-
-.color-yellow {
-    color: #f1c40f;
-}
-
-.color-green1 {
-    color: #2ecc71;
-}
-
-.color-purple {
-    color: #9b6bcc;
-}
-
-.color-inherit {
-    color: inherit;
-}
-
-.color-dark-blue {
-    color: #4765a0;
-}
-
-.color-light-grey {
-    color: #585f69;
-}
-
-.color-light-green {
-    color: #79d5b3;
-}
-
-.color-teal {
-    color: #18ba9b;
-}
-
 /*Background Colors
 ------------------------------------*/
-.bg-color-dark, .bg-color-darker, .bg-color-sea, .bg-color-red, .bg-color-aqua, .bg-color-blue, .bg-color-grey,
-.bg-color-light, .bg-color-green, .bg-color-brown, .bg-color-orange, .bg-color-green1, .bg-color-purple,
-.bg-color-dark-blue, .bg-color-light-grey, .bg-color-light-green, .bg-color-primary {
+.bg-color-primary {
     color: #fff;
+    background-color: #72c02c !important;
 }
 
 .bg-color-white {
     color: #555;
-}
-
-.bg-color-primary {
-    background-color: #72c02c !important;
-}
-
-.bg-color-dark {
-    background-color: #555 !important;
-}
-
-.bg-color-darker {
-    background-color: #222 !important;
-}
-
-.bg-color-white {
-    background-color: #fff !important;
-}
-
-.bg-color-sea {
-    background-color: #1abc9c !important;
-}
-
-.bg-color-red {
-    background-color: #e74c3c !important;
-}
-
-.bg-color-aqua {
-    background-color: #27d7e7 !important;
-}
-
-.bg-color-blue {
-    background-color: #3498db !important;
-}
-
-.bg-color-grey {
-    background-color: #95a5a6 !important;
-}
-
-.bg-color-light {
-    background-color: #f7f7f7 !important;
-}
-
-.bg-color-green {
-    background-color: #72c02c !important;
-}
-
-.bg-color-brown {
-    background-color: #9c8061 !important;
-}
-
-.bg-color-orange {
-    background-color: #e67e22 !important;
-}
-
-.bg-color-green1 {
-    background-color: #2ecc71 !important;
-}
-
-.bg-color-purple {
-    background-color: #9b6bcc !important;
-}
-
-.bg-color-dark-blue {
-    background-color: #4765a0 !important;
-}
-
-.bg-color-light-grey {
-    background-color: #585f69 !important;
-}
-
-.bg-color-light-green {
-    background-color: #79d5b3 !important;
-}
-
-.bg-color-teal {
-    background-color: #18ba9b !important;
-}
-
-.rgba-red {
-    background-color: rgba(231, 76, 60, 0.8)
-}
-
-.rgba-blue {
-    background-color: rgba(52, 152, 219, 0.8);
-}
-
-.rgba-aqua {
-    background-color: rgba(39, 215, 231, 0.8);
-}
-
-.rgba-yellow {
-    background-color: rgba(241, 196, 15, 0.8);
 }
 
 .rgba-default {
     background-color: rgba(114, 192, 44, 0.8);
 }
 
-.rgba-purple {
-    background-color: rgba(155, 107, 204, 0.8);
-}
-
-/*Grey Backgroud*/
+/*Grey Background*/
 .bg-grey {
     background: #f7f7f7;
     border-top: solid 1px #eee;

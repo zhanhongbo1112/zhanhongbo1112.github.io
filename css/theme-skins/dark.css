@@ -69,8 +69,7 @@ body.dark .header .navbar-toggle .icon-bar {
 
 /*List Group
 ------------------------------------*/
-body.dark .list-group-item,
-body.dark .list-group-item:hover {
+body.dark .list-group-item, body.dark .list-group-item:hover {
     background: #222;
     border-color: #303030;
 }
