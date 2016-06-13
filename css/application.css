@@ -6,13 +6,13 @@
  * Website: http://htmlstream.com
 */
 /*Import Global Compulsory CSS Files*/
-@import url(../js/bootstrap/css/bootstrap.min.css);
-@import url(../js/bootstrap/css/bootstrap-theme.min.css);
-@import url(animate.css);
+@import url(bootstrap/css/bootstrap.min.css);
+@import url(bootstrap/css/bootstrap-theme.min.css);
 @import url(line-icons/line-icons.css);
+@import url(font-awesome/animate.css);
 @import url(font-awesome/font-awesome.min.css);
-@import url(../js/scrollbar/jquery.mCustomScrollbar.css);
-@import url(blocks.css);
+@import url(scrollbar/jquery.mCustomScrollbar.css);
+@import url(theme-skins/dark.css);
 
 * {
     border-radius: 0;
@@ -44,6 +44,34 @@ a:focus {
 a:hover {
     color: #72c02c;
     text-decoration: underline;
+}
+
+#topControl {
+    color: #fff;
+    z-index: 99;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    background: #222;
+    position: relative;
+    right: 14px !important;
+    bottom: 11px !important;
+    border-radius: 3px !important;
+}
+
+#topControl:after {
+    top: -2px;
+    left: 8.5px;
+    content: "\f106";
+    position: absolute;
+    text-align: center;
+    font-family: FontAwesome;
+}
+
+#topControl:hover {
+    color: #fff;
+    background: #72c02c;
+    transition: all 0.3s ease-in-out;
 }
 
 /*Navbar*/
@@ -503,9 +531,7 @@ h1 i, h2 i, h3 i, h4 i, h5 i, h6 i {
     font-size: 22px;
 }
 
-.headline h2,
-.headline h3,
-.headline h4 {
+.headline h2, .headline h3, .headline h4 {
     margin: 0 0 -2px 0;
     padding-bottom: 5px;
     display: inline-block;
@@ -532,8 +558,7 @@ h1 i, h2 i, h3 i, h4 i, h5 i, h6 i {
     line-height: 34px !important; /*For Tagline Boxes*/
 }
 
-.heading h2:before,
-.heading h2:after {
+.heading h2:before, .heading h2:after {
     content: ' ';
     width: 70%;
     position: absolute;
@@ -549,8 +574,7 @@ h1 i, h2 i, h3 i, h4 i, h5 i, h6 i {
 }
 
 @media (max-width: 768px) {
-    .heading h2:before,
-    .heading h2:after {
+    .heading h2:before, .heading h2:after {
         width: 20%;
     }
 }
@@ -583,9 +607,7 @@ h1 i, h2 i, h3 i, h4 i, h5 i, h6 i {
 }
 
 .headline-center p {
-    /*color: #999;*/
     font-size: 14px;
-    /*padding: 0 150px;*/
 }
 
 @media (max-width: 991px) {
@@ -788,8 +810,8 @@ h3.heading-xs {
     background: #555;
 }
 
-.btn-u.btn-u-dark:hover, .btn-u.btn-u-dark:focus, .btn-u.btn-u-dark:active,
-.btn-u.btn-u-dark.active, .open .dropdown-toggle.btn-u.btn-u-dark {
+.btn-u.btn-u-dark:hover, .btn-u.btn-u-dark:focus, .btn-u.btn-u-dark:active, .btn-u.btn-u-dark.active,
+.open .dropdown-toggle.btn-u.btn-u-dark {
     background: #333;
 }
 
@@ -952,13 +974,11 @@ i.icon-4x.icon-line {
 }
 
 /*Icon Styles For Links*/
-.link-icon,
-.link-bg-icon {
+.link-icon, .link-bg-icon {
     color: #555;
 }
 
-.link-icon:hover,
-.link-bg-icon:hover {
+.link-icon:hover, .link-bg-icon:hover {
     border: none;
     text-decoration: none;
 }
@@ -999,15 +1019,13 @@ i.icon-bg-u {
 }
 
 /* Make Font Awesome icons fixed width */
-.fa-fixed [class^="fa"],
-.fa-fixed [class*=" fa"] {
+.fa-fixed [class^="fa"], .fa-fixed [class*=" fa"] {
     width: 1.25em;
     text-align: center;
     display: inline-block;
 }
 
-.fa-fixed [class^="fa"].fa-lg,
-.fa-fixed [class*=" fa"].fa-lg {
+.fa-fixed [class^="fa"].fa-lg, .fa-fixed [class*=" fa"].fa-lg {
     /* increased font size for fa-lg */
     width: 1.5625em;
 }
@@ -1036,30 +1054,6 @@ i.icon-bg-u {
 
 .font-normal {
     font-weight: 400 !important;
-}
-
-/*Text Dropcap*/
-.dropcap {
-    float: left;
-    color: #72c02c;
-    padding: 5px 0;
-    font-size: 45px;
-    font-weight: 200;
-    line-height: 30px;
-    margin: 0px 5px 0 0;
-}
-
-.dropcap-bg {
-    float: left;
-    color: #fff;
-    padding: 7px 0;
-    min-width: 50px;
-    font-size: 35px;
-    font-weight: 200;
-    line-height: 35px;
-    text-align: center;
-    background: #72c02c;
-    margin: 4px 10px 0 0;
 }
 
 /*Text Highlights*/
@@ -1118,9 +1112,7 @@ blockquote.bq-green {
 
 /*Panels (Portlets)
 ------------------------------------*/
-.panel,
-.panel-heading,
-.panel-group .panel {
+.panel, .panel-heading, .panel-group .panel {
     border-radius: 0;
 }
 
@@ -1572,18 +1564,8 @@ img.image-md {
     padding-right: 100px;
 }
 
-.margin-bottom-5,
-.margin-bottom-10,
-.margin-bottom-15,
-.margin-bottom-20,
-.margin-bottom-25,
-.margin-bottom-30,
-.margin-bottom-35,
-.margin-bottom-40,
-.margin-bottom-45,
-.margin-bottom-50,
-.margin-bottom-55,
-.margin-bottom-60,
+.margin-bottom-5, .margin-bottom-10, .margin-bottom-15, .margin-bottom-20, .margin-bottom-25, .margin-bottom-30,
+.margin-bottom-35, .margin-bottom-40, .margin-bottom-45, .margin-bottom-50, .margin-bottom-55, .margin-bottom-60,
 .margin-bottom-100 {
     clear: both;
 }
@@ -1822,23 +1804,9 @@ img.image-md {
 
 /*Background Colors
 ------------------------------------*/
-.bg-color-dark,
-.bg-color-darker,
-.bg-color-sea,
-.bg-color-red,
-.bg-color-aqua,
-.bg-color-blue,
-.bg-color-grey,
-.bg-color-light,
-.bg-color-green,
-.bg-color-brown,
-.bg-color-orange,
-.bg-color-green1,
-.bg-color-purple,
-.bg-color-dark-blue,
-.bg-color-light-grey,
-.bg-color-light-green,
-.bg-color-primary {
+.bg-color-dark, .bg-color-darker, .bg-color-sea, .bg-color-red, .bg-color-aqua, .bg-color-blue, .bg-color-grey,
+.bg-color-light, .bg-color-green, .bg-color-brown, .bg-color-orange, .bg-color-green1, .bg-color-purple,
+.bg-color-dark-blue, .bg-color-light-grey, .bg-color-light-green, .bg-color-primary {
     color: #fff;
 }
 
@@ -1946,7 +1914,7 @@ img.image-md {
     background-color: rgba(155, 107, 204, 0.8);
 }
 
-/*Grey Backroud*/
+/*Grey Backgroud*/
 .bg-grey {
     background: #f7f7f7;
     border-top: solid 1px #eee;
@@ -2085,8 +2053,7 @@ img.image-md {
     margin: 0 0 5px 10px;
 }
 
-img.img-center,
-.img-center img {
+img.img-center, .img-center img {
     margin-left: auto;
     margin-right: auto;
 }
@@ -2120,8 +2087,7 @@ img.img-center,
 }
 
 /*Scroll Icon*/
-.scroll-btn-icon,
-.scroll-btn-icon:before {
+.scroll-btn-icon, .scroll-btn-icon:before {
     position: absolute;
     left: 50%;
 }
