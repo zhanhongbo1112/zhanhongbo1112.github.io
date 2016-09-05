@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="YuQi Knowledge Center">
+  <meta name="author" content="Eric H B Zhan">
+
+  <link rel="stylesheet" href="../../css/application.css">
+</head>
+
+<body class="dark">
+<div class="container content-sm">
+  <h2>Deploying to Aliyun</h2>
+
+  <div class="headline">
+    <h3>Overview</h3>
+  </div>
+  <p>This article describes how to deploy the YuQi application to the Aliyun.</p>
+
+  <div class="margin-bottom-40"></div>
+
+  <div class="headline">
+    <h3>Preparation</h3>
+  </div>
+  <p>We assume that you had applied the <a href="https://www.aliyun.com/product/ecs" target="_blank">ECS</a> from
+    <a href="https://www.aliyun.com" target="_blank">Aliyun</a> and got the account and password.</p>
+
+  <p>(1) Download and install <a href="https://www.netsarang.com/download/" target="_blank">Xshell</a>
+    and <a href="https://www.netsarang.com/download/" target="_blank">Xftp</a> (or any other replacements)
+  </p>
+
+  <p>(2) Download the <a href="http://java.com/en/download/manual.jsp" target="_blank">latest JDK</a> (ignore, will
+    install by yum tools.)
+  </p>
+
+  <p>(3) Download the <a href="https://downloads.mariadb.org/" target="_blank">MariaDB</a> (ignore, will
+    install by yum tools.)
+  </p>
+
+  <p>(4) Download the latest <a href="http://tomcat.apache.org/" target="_blank">Tomcat</a></p>
+
+  <p>(5) Log in the ECS with Xshell and upload the packages downloaded to <code
+      class="bg-color-primary">/usr/local/src</code> folder.</p>
+
+  <div class="margin-bottom-40"></div>
+
+  <div class="headline">
+    <h3>Install OpenJDK and Settings</h3>
+  </div>
+  <p>(1) Log in the ECS with Xshell.</p>
+
+  <p>(2) Check the available jdk versions.</p>
+
+  <p><code class="bg-color-primary">yum -y list java*</code></p>
+
+  <p>(3) Install the latest OpenJDK. The default installation location is <code
+      class="bg-color-primary">/usr/lib/jvm/</code>. If you don't know where it is, please use <code
+      class="bg-color-primary">find / -name java</code> to search.</p>
+
+  <p><code class="bg-color-primary">yum -y install java-1.8.0-openjdk*</code></p>
+
+  <p>(4) Set the classpath for JDK in the file <code class="bg-color-primary">/etc/profile</code>.</p>
+
+  <ul class="list-unstyled">
+    <li><code class="bg-color-primary">JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.101-3.b13.el7_2.x86_64</code></li>
+    <li><code class="bg-color-primary">JRE_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.101-3.b13.el7_2.x86_64/jre</code></li>
+    <li><code class="bg-color-primary">PATH=.:$JAVA_HOME/bin:$PATH</code></li>
+    <li><code class="bg-color-primary">export JAVA_HOME PATH</code></li>
+  </ul>
+
+  <p>(5) Run <code class="bg-color-primary">source /etc/profile</code> to make the configuration effective.</p>
+
+  <p>(6) Run <code class="bg-color-primary">java -version</code> to test the installation.</p>
+
+  <div class="margin-bottom-40"></div>
+</div>
+<script type="text/javascript" src="../../js/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+</body>
+</html>

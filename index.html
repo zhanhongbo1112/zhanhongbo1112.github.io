@@ -6,7 +6,7 @@
   <!-- Meta -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="YuQi Help Center">
+  <meta name="description" content="YuQi Knowledge Center">
   <meta name="author" content="Eric H B Zhan">
 
   <!-- Favicon -->
@@ -33,7 +33,7 @@
             <img src="images/logo.png" alt="YuQi"/>
           </a>
 
-          <h3 class="headline-center">HELP CENTER
+          <h3 class="headline-center">KNOWLEDGE CENTER
             <small>v1.0.0</small>
           </h3>
         </div>
@@ -46,8 +46,14 @@
             <li class="dropdown">
               <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">User Guide</a>
               <ul class="dropdown-menu">
-                <li><a href="#">Overview</a></li>
-                <li><a href="#">Main Structure</a></li>
+                <li><a href="#" onclick="openPage('pages/overview.html')">Overview</a></li>
+                <li><a href="#" onclick="openPage('pages/overview.html')">Main Structure</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">Step by Step Guides</a>
+              <ul class="dropdown-menu">
+                <li><a href="#" onclick="openPage('pages/documents/deploying-to-aliyun.html')">Deploying to Aliyun</a></li>
               </ul>
             </li>
             <li class="dropdown">
@@ -62,19 +68,14 @@
             <li><a href="https://github.com/zhanhongbo1112/"><i class="fa fa-github"></i></a></li>
             <li><a href="http://www.linkedin.com/in/eric-zhan-36810951"><i class="fa fa-linkedin"></i></a></li>
           </ul>
-          <p class="copyright-text">&copy; 2016 YUQI Technologies Ltd. <br/>All Rights Reserved.</p>
+          <p class="copyright-text">&copy; 2016 Eric H B Zhan <br/>All Rights Reserved.</p>
         </div>
       </div>
     </nav>
   </div>
   <div class="content-side-right">
-    <div class="container content-sm">
-      <h2>Welcome to YuQi Help Center</h2>
-
-      <div class="headline margin-bottom-40">
-        <h3>Overview</h3>
-      </div>
-    </div>
+    <iframe id="content" src="pages/overview.html" frameborder="0" style="height: 100%;min-height: 640px"
+            width="100%" seamless="seamless"></iframe>
   </div>
 </div>
 <!--/wrapper-->
@@ -87,6 +88,10 @@
   // We extend jQuery by method hasAttr
   $.fn.hasAttr = function (name) {
     return this.attr(name) !== undefined;
+  };
+
+  var openPage = function(url) {
+    window.frames['content'].src=url;
   };
 
   var ScrollBar = {
