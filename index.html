@@ -248,7 +248,7 @@
     SidebarMenuDropdown.startup();
     ScrollToTop.startup();
     $("#content").load(function(){
-      var height = $(this).contents().find("body").height() + 30;
+      var height = $(this).contents().find("body").height() - 100;
       $(this).height(height);
     });
   });
