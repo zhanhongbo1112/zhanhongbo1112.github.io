@@ -47,7 +47,6 @@
               <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">User Guide</a>
               <ul class="dropdown-menu">
                 <li><a href="#" onclick="openPage('pages/overview.html')">Overview</a></li>
-                <li><a href="#" onclick="openPage('pages/overview.html')">Main Structure</a></li>
               </ul>
             </li>
             <li class="dropdown">
@@ -59,22 +58,23 @@
             <li class="dropdown">
               <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">About</a>
               <ul class="dropdown-menu">
-                <li><a href="#">About Us</a></li>
+                <li><a href="#" onclick="openPage('pages/about/aboutMe.html')">About Me</a></li>
               </ul>
             </li>
           </ul>
 
           <ul class="list-inline header-socials">
-            <li><a href="https://github.com/zhanhongbo1112/"><i class="fa fa-github"></i></a></li>
-            <li><a href="http://www.linkedin.com/in/eric-zhan-36810951"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="https://github.com/zhanhongbo1112/" target="_blank"><i class="fa fa-github"></i></a></li>
+            <li><a href="http://www.linkedin.com/in/eric-zhan-36810951" target="_blank"><i class="fa fa-linkedin"></i></a></li>
           </ul>
-          <p class="copyright-text">&copy; 2016 Eric H B Zhan <br/>All Rights Reserved.</p>
+          <p class="copyright-text">&copy; 2016 <a href="#" onclick="openPage('pages/about/aboutMe.html')">Eric H B
+            Zhan</a> <br/>All Rights Reserved.</p>
         </div>
       </div>
     </nav>
   </div>
   <div class="content-side-right">
-    <iframe id="content" src="pages/overview.html" frameborder="0" style="height: 100%;min-height: 640px"
+    <iframe id="content" src="pages/overview.html" frameborder="0" style="min-height: 640px"
             width="100%" seamless="seamless"></iframe>
   </div>
 </div>
@@ -243,14 +243,20 @@
     }
   };
 
+  var IFrame = {
+    startup : function() {
+      $("#content").load(function(){
+        var height = $(this).contents().find("body").height() + 20;
+        $(this).height(height);
+      });
+    }
+  };
+
   $(document).ready(function () {
     ScrollBar.startup();
     SidebarMenuDropdown.startup();
     ScrollToTop.startup();
-    $("#content").load(function(){
-      var height = $(this).contents().find("body").height() + 20;
-      $(this).height(height);
-    });
+    IFrame.startup();
   });
 </script>
 </body>

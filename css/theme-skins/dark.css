@@ -197,3 +197,55 @@ body.dark .dropdown-menu > li > a:hover, body.dark .dropdown-menu > li > a:focus
     background: #777;
 }
 
+/*Panel
+------------------------------------*/
+body.dark .panel {
+    background: none;
+}
+
+body.dark .panel.panel-default .panel-heading {
+    color: #ccc;
+    background: #222;
+    border-color: #303030;
+}
+
+body.dark .panel .panel-title {
+    color: inherit;
+}
+
+body.dark .panel .panel-body, body.dark .panel .panel-footer {
+    background: #222;
+}
+
+/*Profile Page
+------------------------------------*/
+body.dark .profile-body {
+    background: #1c1c1c;
+}
+
+body.dark .profile .panel-heading {
+    border-bottom-color: #333;
+}
+
+body.dark .profile .profile-bio, body.dark .profile .profile-heading, body.dark .profile .panel-heading {
+    background: #252525;
+}
+
+body.dark .profile .profile-bio span,
+body.dark .profile .panel-heading h2 {
+    color: #999;
+}
+
+body.dark .profile .timeline-me .cbp_tmlabel:after {
+    border: none;
+}
+
+body.dark .profile .btn-u.btn-u-default {
+    color: #999;
+    background: #333;
+}
+
+body.dark .profile .btn-u.btn-u-default:hover {
+    background: #444;
+}
+
