@@ -239,11 +239,6 @@
 
       $(window).bind('scroll resize', function (e) {
         _this.toggleControl();
-      })
-      
-      $("#content").load(function(){
-        var height = $(this).contents().find("body").height() + 30;
-        $(this).height(height);
       });
     }
   };
@@ -252,6 +247,10 @@
     ScrollBar.startup();
     SidebarMenuDropdown.startup();
     ScrollToTop.startup();
+    $("#content").load(function(){
+      var height = $(this).contents().find("body").height() + 30;
+      $(this).height(height);
+    });
   });
 </script>
 </body>
