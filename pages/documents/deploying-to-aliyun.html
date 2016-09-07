@@ -16,7 +16,7 @@
   <div class="headline">
     <h3>Overview</h3>
   </div>
-  <p>This article describes how to deploy the YuQi application to the Aliyun.</p>
+  <p>This article describes how to deploy the YuQi application to the Aliyun ECS (CentOS 7.x).</p>
 
   <div class="margin-bottom-40"></div>
 
@@ -73,6 +73,22 @@
 
   <p>(6) Run <code class="bg-color-primary">java -version</code> to test the installation.</p>
 
+  <div class="margin-bottom-40"></div>
+  
+  <div class="headline">
+    <h3>Install Tomcat and Settings</h3>
+  </div>
+  <p>(1) Go to <code class="bg-color-primary">/usr/local</code>, Unzip the tar package of Tomcat (v8.5), 
+  <code class="bg-color-primary">tar -zxvf src/apache-tomcat-8.5.5.tar.gz tomcat</code></p>
+  
+  <p>(2) Check the tomcat installation</p>
+  
+  <p>Go to <code class="bg-color-primary">/usr/local/tomcat/bin</code>, run <code class="bg-color-primary">./version</code></p>
+  
+  <p>(3) Start the server</p>
+  
+  <p>Run <code class="bg-color-primary">./startup</code>, check the result at <code class="bg-color-primary">http://[IP Address]:8080/</code></p>
+  
   <div class="margin-bottom-40"></div>
 </div>
 <script type="text/javascript" src="../../js/jquery.min.js"></script>
