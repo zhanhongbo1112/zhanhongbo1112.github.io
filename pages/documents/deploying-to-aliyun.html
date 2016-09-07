@@ -96,13 +96,11 @@
   
   <p>(4) Change the default port</p>
   
-  <p>Go to <code class="bg-color-primary">/usr/local/tomcat/conf</code>, edit the server.xml</p>
+  <p>Go to <code class="bg-color-primary">/usr/local/tomcat/conf</code>, edit the server.xml, <code class="bg-color-primary">vi server.xml</code>.</p>
   
-  <p><code class="bg-color-primary">vi server.xml</code></p>
+  <p>Find the default port '8080', <code class="bg-color-primary">/8080</code>, and change it to 80.</p>
   
-  <p>Find the default port '8080', <code class="bg-color-primary">/8080</code>, and change it to 80</p>
-  
-  <p><code>&lt;Connector port="80" protocol="HTTP/1.1" connectionTimeout="20000" redirectPort="8443" /&gt;</code></p>
+  <p><code class="bg-color-primary">&lt;Connector port="80" protocol="HTTP/1.1" connectionTimeout="20000" redirectPort="8443" /&gt;</code></p>
   
   <div class="margin-bottom-40"></div>
 </div>
