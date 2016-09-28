@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="YuQi Knowledge Center">
+  <meta name="author" content="Eric H B Zhan">
+
+  <link rel="stylesheet" href="../../css/application.css">
+</head>
+
+<body class="dark">
+<div class="container content-sm">
+  <h2>Deploying WAR package to Aliyun ECS</h2>
+
+  <div class="headline">
+    <h3>Overview</h3>
+  </div>
+  <p>This article describes how to deploy an application (<a href="https://jenkins.io/" target="_blank">Jenkins</a>) to
+    the Aliyun ECS (CentOS 7.x).</p>
+
+  <div class="headline">
+    <h3>Preparation</h3>
+  </div>
+
+  <p>We assume that you had applied the <a href="https://www.aliyun.com/product/ecs" target="_blank">ECS</a> from
+    <a href="https://www.aliyun.com" target="_blank">Aliyun</a> and got the account and password.</p>
+
+  <p>(1) Download and install <a href="https://www.netsarang.com/download/" target="_blank">Xshell</a>
+    and <a href="https://www.netsarang.com/download/" target="_blank">Xftp</a> (or any other replacements)
+  </p>
+
+  <p>(2) Download the <a href="http://java.com/en/download/manual.jsp" target="_blank">latest JDK</a> (ignore, will
+    install by yum tools.)
+  </p>
+
+  <p>(3) Download the latest <a href="http://tomcat.apache.org/" target="_blank">Tomcat</a></p>
+
+  <p>(4) Download the latest <a href="https://jenkins.io/" target="_blank">Jenkins</a> war package</p>
+
+  <p>(5) Log in the ECS with Xshell and upload the packages downloaded to <code>/usr/local/src</code> folder.</p>
+
+  <div class="headline">
+    <h3>Install OpenJDK and Settings</h3>
+  </div>
+
+  <p>(1) Log in the ECS with Xshell.</p>
+
+  <p>(2) Check the available jdk versions.</p>
+
+  <p><code>yum -y list java*</code></p>
+
+  <p>(3) Install the latest OpenJDK. The default installation location is <code>/usr/lib/jvm/</code>.
+    If you don't know where it is, please use <code>find / -name java</code> to search.</p>
+
+  <p><code>yum -y install java-1.8.0-openjdk*</code></p>
+
+  <p>(4) Set the classpath for JDK in the file <code>/etc/profile</code>.</p>
+
+  <ul class="list-unstyled">
+    <li><code>JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.101-3.b13.el7_2.x86_64</code></li>
+    <li><code>JRE_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.101-3.b13.el7_2.x86_64/jre</code></li>
+    <li><code>PATH=.:$JAVA_HOME/bin:$PATH</code></li>
+    <li><code>export JAVA_HOME PATH</code></li>
+  </ul>
+
+  <p>(5) Run <code>source /etc/profile</code> to make the configuration effective.</p>
+
+  <p>(6) Run <code>java -version</code> to test the installation.</p>
+
+  <div class="headline">
+    <h3>Install Tomcat and Settings</h3>
+  </div>
+
+  <p>(1) Unzip the tar package</p>
+
+  <p>Go to <code>/usr/local</code>, Unzip the tar package of Tomcat (v8.5).</p>
+
+  <p><code>tar -zxvf src/apache-tomcat-8.5.5.tar.gz tomcat</code></p>
+
+  <p>(2) Check the tomcat installation</p>
+
+  <p>Go to <code>/usr/local/tomcat/bin</code> and run <code>./version</code></p>
+
+  <p>(3) Start the server</p>
+
+  <p>Go to <code>/usr/local/tomcat/bin</code> and run <code>./startup</code>,
+    check the result.</p>
+
+  <p><code>http://[IP Address]:8080/</code></p>
+
+  <p>(4) Change the default port</p>
+
+  <p>Go to <code>/usr/local/tomcat/conf</code>, edit the server.xml, <code>vi server.xml</code>.</p>
+
+  <p>Find the default port '8080', <code>/8080</code>, and change it to 80.</p>
+
+  <p><code>&lt;Connector port="80" protocol="HTTP/1.1" connectionTimeout="20000" redirectPort="8443" /&gt;</code></p>
+
+  <p>Then you can visit by <code>http://[IP Address]/</code></p>
+
+  <div class="headline">
+    <h3>Install Jenkins</h3>
+  </div>
+
+  <p>Go to <code>/usr/local/src</code> Folder, copy the war package to the <code>webapps</code> folder of Tomcat.</p>
+
+  <p><code>cp jenkins.war ../tomcat/webapps</code></p>
+
+  <p>If Tomcat was started, the WAR package will be unpacked automatically. You can see the status in the <code>logs</code>
+     folder of Tomcat.</p>
+
+  <p><code>tail -f ../tomcat/logs/catalina.out</code></p>
+
+  <p>After started, you can launch Jenkins at <code>http://[IP Address]/jenkins</code> to check.</p>
+</div>
+<script type="text/javascript" src="../../js/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+</body>
+</html>

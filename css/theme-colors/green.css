@@ -3,12 +3,15 @@
 * Default Color 	  : #72c02c;
 * Default Hover Color : #5fb611;
 */
-
 a {
     color: #72c02c;
 }
 
 a:focus, a:hover, a:active {
+    color: #72c02c;
+}
+
+code {
     color: #72c02c;
 }
 
@@ -131,7 +134,7 @@ i.style-switcher-btn:hover {
 
 /* Breadcrumbs
 ------------------------------------*/
-span.label-u, span.badge-u {
+span.label-u, span.badge-u, .list-group-item.active > .badge.badge-u {
     background: #72c02c;
 }
 
@@ -144,6 +147,64 @@ i.icon-color-u {
 
 i.icon-bg-u {
     background: #72c02c;
+}
+
+.link-icon:hover i {
+    color: #72c02c;
+    background: none;
+    border: solid 1px #72c02c;
+}
+
+.link-bg-icon:hover i {
+    color: #72c02c;
+    background: #72c02c;
+    border-color: #72c02c;
+}
+
+.text-highlights-green {
+    background: #72c02c;
+}
+
+.text-border-green {
+    border-color: #72c02c;
+}
+
+blockquote:hover, blockquote.text-right:hover {
+    border-color: #72c02c;
+}
+
+blockquote.bq-green {
+    border-color: #72c02c;
+}
+
+/*Panel Unify*/
+.panel-u {
+    border-color: #72c02c;
+}
+
+.panel-u > .panel-heading {
+    background: #72c02c;
+}
+
+/*progress-bar (colors)*/
+.progress-bar-u {
+    background: #72c02c;
+}
+
+/*Count Stars
+------------------------------------*/
+.stars-existing {
+    color: #72c02c;
+}
+
+/*Background Colors
+------------------------------------*/
+.bg-color-primary {
+    background-color: #72c02c !important;
+}
+
+.rgba-default {
+    background-color: rgba(114, 192, 44, 0.8);
 }
 
 /* Top Control
@@ -174,12 +235,20 @@ i.icon-bg-u {
 
 /*Green Transparent*/
 .cube-portfolio .cbp-caption-activeWrap.default-transparent-hover {
-    background: rgba(114,192,44,.9) !important;
+    background: rgba(114, 192, 44, .9) !important;
 }
 
 /* Heading */
 .headline h2, .headline h3, .headline h4 {
     border-bottom: 2px solid #72c02c;
+}
+
+.headline-center h2:after {
+    background: #72c02c;
+}
+
+.headline-left .headline-brd:after {
+    background: #72c02c;
 }
 
 /* Progress Bar

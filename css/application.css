@@ -34,7 +34,6 @@ p, li, li a, label {
 }
 
 a {
-    color: #72c02c;
     text-decoration: none;
 }
 
@@ -47,7 +46,6 @@ a:focus {
 }
 
 a:hover {
-    color: #72c02c;
     text-decoration: underline;
 }
 
@@ -75,7 +73,6 @@ a:hover {
 
 #topControl:hover {
     color: #fff;
-    background: #72c02c;
     transition: all 0.3s ease-in-out;
 }
 
@@ -139,14 +136,17 @@ h3 {
 }
 
 h4 {
+    font-size: 16px;
     line-height: 25px;
 }
 
 h5 {
+    font-size: 12px;
     line-height: 20px;
 }
 
 h6 {
+    font-size: 10px;
     line-height: 18px;
 }
 
@@ -176,7 +176,6 @@ h1 i, h2 i, h3 i, h4 i, h5 i, h6 i {
     margin: 0 0 -2px 0;
     padding-bottom: 5px;
     display: inline-block;
-    border-bottom: 2px solid #72c02c;
 }
 
 .headline-md {
@@ -244,7 +243,6 @@ h1 i, h2 i, h3 i, h4 i, h5 i, h6 i {
     margin-left: -15px;
     text-align: center;
     position: absolute;
-    background: #72c02c;
 }
 
 .headline-center p {
@@ -285,7 +283,6 @@ h1 i, h2 i, h3 i, h4 i, h5 i, h6 i {
     content: " ";
     bottom: -5px;
     position: absolute;
-    background: #72c02c;
 }
 
 /*Heading Sizes
@@ -360,7 +357,6 @@ h3.heading-xs {
     }
 }
 
-
 /*Button Styles
 ------------------------------------*/
 .btn {
@@ -376,7 +372,6 @@ h3.heading-xs {
     font-weight: 400;
     padding: 6px 13px;
     position: relative;
-    background: #72c02c;
     white-space: nowrap;
     display: inline-block;
     text-decoration: none;
@@ -434,19 +429,6 @@ h3.heading-xs {
 }
 
 /*Buttons Color*/
-.btn-u:hover, .btn-u:focus, .btn-u:active, .btn-u.active, .open .dropdown-toggle.btn-u {
-    background: #5fb611;
-}
-
-.btn-u-split.dropdown-toggle {
-    border-left: solid 1px #5fb611;
-}
-
-.btn-u.btn-u-dark {
-    background: #555;
-}
-
-.btn-u.btn-u-dark:hover, .btn-u.btn-u-dark:focus, .btn-u.btn-u-dark:active, .btn-u.btn-u-dark.active,
 .open .dropdown-toggle.btn-u.btn-u-dark {
     background: #333;
 }
@@ -459,46 +441,16 @@ h3.heading-xs {
     background: #585f69;
 }
 
-.btn-u.btn-u-light-grey:hover, .btn-u.btn-u-light-grey:focus, .btn-u.btn-u-light-grey:active,
-.btn-u.btn-u-light-grey.active, .open .dropdown-toggle.btn-u.btn-u-light-grey {
+.btn-u.btn-u-light-grey:hover,
+.btn-u.btn-u-light-grey:focus,
+.btn-u.btn-u-light-grey:active,
+.btn-u.btn-u-light-grey.active,
+.open .dropdown-toggle.btn-u.btn-u-light-grey {
     background: #484f58;
 }
 
 .btn-u.btn-u-split-light-grey.dropdown-toggle {
     border-left: solid 1px #484f58;
-}
-
-/*Bordered Buttons*/
-.btn-u.btn-brd {
-    color: #555;
-    background: none;
-    padding: 5px 13px;
-    border: solid 1px transparent;
-}
-
-.btn-u.btn-brd:hover {
-    background: none;
-}
-
-.btn-u.btn-brd:focus {
-    background: none;
-}
-
-.btn-u.btn-brd.btn-brd-hover:hover {
-    color: #fff !important;
-}
-
-.btn-u.btn-brd {
-    border-color: #72c02c;
-}
-
-.btn-u.btn-brd:hover {
-    color: #5fb611;
-    border-color: #5fb611;
-}
-
-.btn-u.btn-brd.btn-brd-hover:hover {
-    background: #5fb611;
 }
 
 /*Dropdown Buttons
@@ -527,10 +479,6 @@ span.badge, .list-group-item.active > .badge {
     color: #fff;
     font-weight: 400;
     padding: 4px 7px;
-}
-
-span.label-u, span.badge-u, .list-group-item.active > .badge.badge-u {
-    background: #72c02c;
 }
 
 /*Font Awesome Icon Styles*/
@@ -619,39 +567,29 @@ i.icon-4x.icon-line {
     text-decoration: none;
 }
 
-.link-icon:hover i {
-    color: #72c02c;
-    background: none;
-    border: solid 1px #72c02c;
-}
-
-.link-bg-icon:hover i {
-    color: #72c02c;
-    background: #72c02c;
-    border-color: #72c02c;
-    color: #fff !important;
-}
-
 /*Icons Color*/
-i.icon-color-u, i.icon-color-red, i.icon-color-sea, i.icon-color-dark, i.icon-color-grey, i.icon-color-blue,
-i.icon-color-green, i.icon-color-yellow, i.icon-color-orange, i.icon-color-purple, i.icon-color-aqua, i.icon-color-brown,
-i.icon-color-dark-blue, i.icon-color-light-grey, i.icon-color-light-green {
+i.icon-color-u,
+i.icon-color-red,
+i.icon-color-sea,
+i.icon-color-dark,
+i.icon-color-grey,
+i.icon-color-blue,
+i.icon-color-green,
+i.icon-color-yellow,
+i.icon-color-orange,
+i.icon-color-purple,
+i.icon-color-aqua,
+i.icon-color-brown,
+i.icon-color-dark-blue,
+i.icon-color-light-grey,
+i.icon-color-light-green {
     background: none;
-}
-
-i.icon-color-u {
-    color: #72c02c;
-    border: solid 1px #72c02c;
 }
 
 /*Icons Background Color*/
 i.icon-bg-u, i.icon-bg-green {
     color: #fff;
     border-color: transparent;
-}
-
-i.icon-bg-u {
-    background: #72c02c;
 }
 
 /* Make Font Awesome icons fixed width */
@@ -700,30 +638,17 @@ i.icon-bg-u {
     background: #555;
 }
 
-.text-highlights-green {
-    background: #72c02c;
-}
-
-.text-border-green {
-    border-color: #72c02c;
-}
-
 /*List Styles*/
 .list-styles li {
     margin-bottom: 8px;
 }
 
 blockquote:hover, blockquote.text-right:hover {
-    border-color: #72c02c;
     transition: all 0.4s ease-in-out;
 }
 
 blockquote.bq-dark, blockquote.bq-dark:hover {
     border-color: #585f69;
-}
-
-blockquote.bq-green {
-    border-color: #72c02c;
 }
 
 /*Lists
@@ -760,15 +685,6 @@ blockquote.bq-green {
 /*Panel Table*/
 .panel .table {
     margin-bottom: 0;
-}
-
-/*Panel Unify*/
-.panel-u {
-    border-color: #72c02c;
-}
-
-.panel-u > .panel-heading {
-    background: #72c02c;
 }
 
 /*Progress Bar
@@ -809,10 +725,6 @@ blockquote.bq-green {
 /*progress-bar (colors)*/
 .progress {
     background: #e5e5e5;
-}
-
-.progress-bar-u {
-    background: #72c02c;
 }
 
 /*Progress Bar Animation
@@ -856,7 +768,6 @@ blockquote.bq-green {
 /*Count Stars
 ------------------------------------*/
 .stars-existing {
-    color: #72c02c;
     cursor: pointer;
 }
 
@@ -1022,8 +933,18 @@ img.image-md {
     padding-right: 100px;
 }
 
-.margin-bottom-5, .margin-bottom-10, .margin-bottom-15, .margin-bottom-20, .margin-bottom-25, .margin-bottom-30,
-.margin-bottom-35, .margin-bottom-40, .margin-bottom-45, .margin-bottom-50, .margin-bottom-55, .margin-bottom-60,
+.margin-bottom-5,
+.margin-bottom-10,
+.margin-bottom-15,
+.margin-bottom-20,
+.margin-bottom-25,
+.margin-bottom-30,
+.margin-bottom-35,
+.margin-bottom-40,
+.margin-bottom-45,
+.margin-bottom-50,
+.margin-bottom-55,
+.margin-bottom-60,
 .margin-bottom-100 {
     clear: both;
 }
@@ -1185,15 +1106,10 @@ img.image-md {
 ------------------------------------*/
 .bg-color-primary {
     color: #fff;
-    background-color: #72c02c !important;
 }
 
 .bg-color-white {
     color: #555;
-}
-
-.rgba-default {
-    background-color: rgba(114, 192, 44, 0.8);
 }
 
 /*Grey Background*/
