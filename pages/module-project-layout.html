@@ -16,7 +16,7 @@
   <div class="margin-bottom-30"></div>
   
   <div class="headline">
-    <h3>Structure of Project Layout Module</h3>
+    <h3>Structure of Project Layout</h3>
   </div>
   
   <p>Project Layout defines the common layout template and all the files that support the YQBoots Framework.</p>
@@ -35,15 +35,29 @@
     <h3>File Structure</h3>
   </div>
   
+  <h4>Overview</h4>
+  
+  <ul class="list-unstyled list-style">
+	<li><code>resources/templates</code> -- The location for all the HTML pages, and which is the default location 
+	for <a href="http://www.thymeleaf" target="_blank">Thymeleaf</a></li>
+	<li><code>resources/META-INF/resources</code> -- The location for all the JavaScript and CSS files.</li>
+  </ul>
+   
   <h4>Page Layout</h4>
   
-  <p></p>
+  <p>It is a top-content-bottom layout currently, which makes the content area much larger to display contents.</p>
+  
+  <p>The page entrance is <code>templates/layouts/layout.html</code>, it's a <a href="http://www.thymeleaf" target="_blank">Thymeleaf</a> template.</p>
+  
+  <p><img src="../images/guide/layout.png"></img></p>
   
   <div class="margin-bottom-30"></div>
   
   <h4>Page Header</h4>
   
-  <p>Page head contains metadata, favicon, title and CSS links.</p>
+  <p>Page head contains logo, top bar and menu bar.</p>
+  
+  <p><img src="../images/guide/header.png"></img></p>
   
   <div class="margin-bottom-30"></div>
   
@@ -51,11 +65,27 @@
   
   <p>Page footer contains copy right and social links.</p>
   
+  <p><img src="../images/guide/footer.png"></img></p>
+  
   <div class="margin-bottom-30"></div>
   
   <h4>JavaScript (Bootstrap, jQuery, Dojo)</h4>
   
-  <p></p>
+  <p>The script entrance is <code>/META-INF/resources/dojo/baf/main.js</code>, all JavaScripts are organised by dojo,
+  whose file structure is similar to Java package.</p>
+  
+  <p><img src="../images/guide/javascript-main.png"></img></p>
+  
+  <p>All the application related JavaScript files are located at <code>/dojo/app/</code>. For instance, the home page
+  <code>/templates/index.html</code> is bootstrapped by <code>/dojo/app/index.js</code>.</p>
+  
+  <div class="margin-bottom-30"></div>
+  
+  <h4>CSS</h4>
+  
+  <p>The script entrance is <code>/META-INF/resources/theme/application.css</code>.</p>
+  
+  <p><img src="../images/guide/css-main.png"></img></p>
   
   <div class="margin-bottom-30"></div>
 </div>
