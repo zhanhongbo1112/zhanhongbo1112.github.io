@@ -12,15 +12,56 @@
 <body class="dark">
 <div class="container content-sm">
   <h2>Module: Project Thymeleaf</h2>
-  
+
   <div class="margin-bottom-30"></div>
-  
+
   <div class="headline">
     <h3>Structure of Project Thymeleaf</h3>
   </div>
-  
-  <p>Project Thymeleaf defines the customized templates in the YQBoots Framework.</p>
-  
+
+  <p>Project Thymeleaf defines a customized thymeleaf dialect and its template processors. It currently provides the
+    following processors:</p>
+
+  <div class="margin-bottom-30"></div>
+
+  <h4>Pagination</h4>
+
+  <p><code>&lt;yq:pagination page="${page}" th:href="@{/project/menu}"/&gt;</code></p>
+
+  <p><img src="../images/guide/pagination.png"/></p>
+
+  <div class="margin-bottom-30"></div>
+
+  <h4>Page Summary</h4>
+
+  <p><code>&lt;div yq:pageSummary="${page}"&gt;&lt;/div&gt;</code></p>
+
+  <p><img src="../images/guide/page-summary.png"/></p>
+
+  <div class="margin-bottom-30"></div>
+
+  <h4>Menu</h4>
+
+  <p><code>&lt;yq:menus layout="full-width"/&gt;</code></p>
+
+  <p><img src="../images/guide/menus.png"></img></p>
+
+  <div class="margin-bottom-30"></div>
+
+  <h4>Breadcrumbs</h4>
+
+  <p><code>&lt;yq:breadcrumbs menu="PROJECT_MENU_ITEM"/&gt;</code></p>
+
+  <p><img src="../images/guide/breadcrumbs.png"></img></p>
+
+  <div class="margin-bottom-30"></div>
+
+  <h4>Alert Message</h4>
+
+  <p><code>&lt;yq:alert level="danger" /&gt;</code></p>
+
+  <p><img src="../images/guide/alert.png"></img></p>
+
   <div class="margin-bottom-30"></div>
 </div>
 <script type="text/javascript" src="../js/jquery.min.js"></script>
