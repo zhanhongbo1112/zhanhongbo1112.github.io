@@ -76,6 +76,21 @@ a:hover {
     transition: all 0.3s ease-in-out;
 }
 
+.content-side-left, .content-side-right {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    -webkit-overflow-scrolling: touch;
+    overflow-y: scroll;
+}
+
+.content-side-left iframe, .content-side-right iframe {
+    height: 100%;
+    width: 100%;
+}
+
 /*Content Side Right*/
 @media (min-width: 768px) {
     .content-side-right {

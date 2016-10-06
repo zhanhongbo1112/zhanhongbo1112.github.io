@@ -9,6 +9,10 @@
   <meta name="description" content="YuQi Knowledge Center">
   <meta name="author" content="Eric H B Zhan">
 
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
   <!-- Favicon -->
   <link rel="shortcut icon" href="favicon.ico">
 
@@ -47,21 +51,23 @@
               <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">User Guide</a>
               <ul class="dropdown-menu">
                 <li><a href="#" onclick="openPage('pages/overview.html')">Overview</a></li>
-				<li><a href="#" onclick="openPage('pages/main-structure.html')">Main Structure</a></li>
-				<li><a href="#" onclick="openPage('pages/module-project-layout.html')">Module: Project Layout</a></li>
-				<li><a href="#" onclick="openPage('pages/module-project-thymeleaf.html')">Module: Project Thymeleaf</a></li>
-				<li><a href="#" onclick="openPage('pages/module-project-data-dict.html')">Module: Project Data Dictionary</a></li>
-				<li><a href="#" onclick="openPage('pages/module-project-menu.html')">Module: Project Menu</a></li>
-				<li><a href="#" onclick="openPage('pages/module-project-fss.html')">Module: Project FSS</a></li>
-				<li><a href="#" onclick="openPage('pages/module-project-web.html')">Module: Project Web</a></li>
-				<li><a href="#" onclick="openPage('pages/module-project-site.html')">Module: Project Site</a></li>
+                <li><a href="#" onclick="openPage('pages/main-structure.html')">Main Structure</a></li>
+                <li><a href="#" onclick="openPage('pages/module-project-layout.html')">Module: Project Layout</a></li>
+                <li><a href="#" onclick="openPage('pages/module-project-thymeleaf.html')">Module: Project Thymeleaf</a></li>
+                <li><a href="#" onclick="openPage('pages/module-project-data-dict.html')">Module: Project Data Dictionary</a></li>
+                <li><a href="#" onclick="openPage('pages/module-project-menu.html')">Module: Project Menu</a></li>
+                <li><a href="#" onclick="openPage('pages/module-project-fss.html')">Module: Project FSS</a></li>
+                <li><a href="#" onclick="openPage('pages/module-project-web.html')">Module: Project Web</a></li>
+                <li><a href="#" onclick="openPage('pages/module-project-site.html')">Module: Project Site</a></li>
               </ul>
             </li>
             <li class="dropdown">
               <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">Step by Step Guides</a>
               <ul class="dropdown-menu">
-                <li><a href="#" onclick="openPage('pages/documents/deploying-war-to-aliyun.html')">Deploying WAR to Aliyun</a></li>
-                <li><a href="#" onclick="openPage('pages/documents/using-firewalld-on-linux.html')">Using FirewallD on Linux</a></li>
+                <li><a href="#" onclick="openPage('pages/documents/deploying-war-to-aliyun.html')">Deploying WAR to
+                  Aliyun</a></li>
+                <li><a href="#" onclick="openPage('pages/documents/using-firewalld-on-linux.html')">Using FirewallD on
+                  Linux</a></li>
               </ul>
             </li>
             <li class="dropdown">
@@ -74,7 +80,8 @@
 
           <ul class="list-inline header-socials">
             <li><a href="https://github.com/zhanhongbo1112/" target="_blank"><i class="fa fa-github"></i></a></li>
-            <li><a href="http://www.linkedin.com/in/eric-zhan-36810951" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="http://www.linkedin.com/in/eric-zhan-36810951" target="_blank"><i
+                class="fa fa-linkedin"></i></a></li>
           </ul>
           <p class="copyright-text">&copy; 2016 <a href="#" onclick="openPage('pages/about/aboutMe.html')">Eric H B
             Zhan</a> <br/>All Rights Reserved.</p>
@@ -83,8 +90,7 @@
     </nav>
   </div>
   <div class="content-side-right">
-    <iframe id="content" src="pages/overview.html" frameborder="0" style="min-height: 640px"
-            width="100%" seamless="seamless"></iframe>
+    <iframe id="content" src="pages/overview.html" scrolling="no" frameborder="0" seamless="seamless"></iframe>
   </div>
 </div>
 <!--/wrapper-->
@@ -99,8 +105,8 @@
     return this.attr(name) !== undefined;
   };
 
-  var openPage = function(url) {
-    window.frames['content'].src=url;
+  var openPage = function (url) {
+    window.frames['content'].src = url;
   };
 
   var ScrollBar = {
@@ -252,12 +258,46 @@
     }
   };
 
+  // touch event for iPad/iPhone
+  var toScrollFrame = function (iFrame, mask) {
+    if (!navigator.userAgent.match(/iPad|iPhone/i)) {
+      return false;
+    }
+
+    //do nothing if not iOS device
+    var mouseY = 0;
+    var mouseX = 0;
+    $(iFrame).ready(function () { //wait for iFrame to load
+      //remember initial drag motivation
+      $(iFrame).contents()[0].body.addEventListener('touchstart', function (e) {
+        mouseY = e.targetTouches[0].pageY;
+        mouseX = e.targetTouches[0].pageX;
+      });
+
+      //update scroll position based on initial drag position
+      $(iFrame).contents()[0].body.addEventListener('touchmove', function (e) {
+        e.preventDefault();
+
+        // prevent whole page dragging
+        var box = $(mask);
+        box.scrollLeft(box.scrollLeft() + mouseX - e.targetTouches[0].pageX);
+        box.scrollTop(box.scrollTop() + mouseY - e.targetTouches[0].pageY);
+        //mouseX and mouseY don't need periodic updating, because the current position
+        //of the mouse relative to th iFrame changes as the mask scrolls it.
+      });
+    });
+
+    return true;
+  };
+
   var IFrame = {
-    startup : function() {
-      $("#content").load(function(){
+    startup: function () {
+      $("#content").load(function () {
         var height = $(this).contents().find("body").height() + 20;
         $(this).height(height);
       });
+
+      toScrollFrame("#content", ".mask")
     }
   };
 
