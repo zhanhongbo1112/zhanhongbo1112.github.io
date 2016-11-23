@@ -11,26 +11,30 @@
 
 <body class="dark">
 <div class="container content-sm">
-  <h2>Module: Project Web</h2>
+  <h2>Module: Web Core</h2>
 
   <div class="margin-bottom-30"></div>
 
   <div class="headline">
-    <h3>Structure of Project Web</h3>
+    <h3>Structure of Web Core</h3>
   </div>
 
-  <p>Project Web defines the common beans and methods for the Web Layer.</p>
+  <p>Web Core module defines the common beans and methods for the Web Layer.</p>
 
   <h4>LocaleChangeInterceptor</h4>
 
   <p>It registers the LocaleChangeInterceptor, which provides the functionality of locale change from different
     languages.</p>
 
-
   <h4>LocaleResolver</h4>
 
   <p>It overrides the default LocaleResolver and provides the SessionLocaleResolver to store the locale information to
     the HTTP Session.</p>
+
+  <h4>ErrorPageFilter</h4>
+
+  <p>It provides extra error page handler for some special needs, such as handling the exception from the filter which
+    is processed before controller..</p>
 
   <div class="margin-bottom-30"></div>
 </div>
